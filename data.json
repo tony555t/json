@@ -5,16 +5,16 @@
       "users": [
         {
           "id": 1,
-          "name": "Antony Odhiambo",
+          "name": "jack mwangi",
           "email": "antony@example.com",
-          "location": "Kisumu, Kenya",
+          "location": "kisii ,kenya",
           "joinDate": "2024-01-15",
-          "isActive": true,
+          "isActive": "true",
           "stats": {
             "posts": 26,
-            "followers": 150,
-            "following": 89,
-            "location": "kisumu ,kenya"
+            "followers": 10000,
+            "following": 2000,
+            "location": "kisii ,kenya"
           }
         },
         {
@@ -23,7 +23,7 @@
           "email": "jane@example.com",
           "location": "Lagos, Nigeria",
           "joinDate": "2024-03-22",
-          "isActive": false,
+          "isActive": "true",
           "stats": {
             "posts": 12,
             "followers": 75,
@@ -34,13 +34,14 @@
           "id": 3,
           "name": "Peter Mwangi",
           "email": "peter@example.com",
-          "location": "Mombasa, Kenya",
+          "location": "kisii ,kenya",
           "joinDate": "2025-09-29",
-          "isActive": true,
+          "isActive": "false",
           "stats": {
-            "posts": 0,
-            "followers": 0,
-            "following": 0
+            "posts": 10,
+            "followers": 1000,
+            "following": 200,
+            "location": "kisii ,kenya"
           }
         }
       ]
@@ -50,7 +51,7 @@
       "totalPages": 5,
       "totalUsers": 51
     },
-    "timestamp": "2025-09-29T09:14:47.179Z"
+    "timestamp": "2025-09-29T11:33:55.651Z"
   },
   "processedData": {
     "activeUsers": [

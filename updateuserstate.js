@@ -34,9 +34,16 @@ function updateUser(userId, updates) {
   return updatedData;
 }
 
-const updated = updateUser(1, {
-  location: "Kisumu, Kenya", 
-  stats: { posts: 26 }       
+const updated = updateUser(3, {
+//   name: "jack mwangi", 
+  location:"kisii ,kenya",
+  isActive:"false",
+  stats: { posts: 10 ,
+           location: "kisii ,kenya" ,
+           following:"200",
+           followers:"1000"
+
+  }       
 });
 
 // Step 4: Save back to file
