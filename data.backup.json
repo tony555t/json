@@ -1,0 +1,80 @@
+{
+  "apiResponse": {
+    "success": true,
+    "data": {
+      "users": [
+        {
+          "id": 1,
+          "name": "Antony Odhiambo",
+          "email": "antony@example.com",
+          "location": "Nairobi, Kenya",
+          "joinDate": "2024-01-15",
+          "isActive": true,
+          "stats": {
+            "posts": 25,
+            "followers": 150,
+            "following": 89
+          }
+        },
+        {
+          "id": 2,
+          "name": "Jane Smith",
+          "email": "jane@example.com",
+          "location": "Lagos, Nigeria",
+          "joinDate": "2024-03-22",
+          "isActive": false,
+          "stats": {
+            "posts": 12,
+            "followers": 75,
+            "following": 45
+          }
+        }
+      ]
+    },
+    "pagination": {
+      "page": 1,
+      "totalPages": 5,
+      "totalUsers": 50
+    },
+    "timestamp": "2025-09-26T12:53:08.386Z"
+  },
+  "processedData": {
+    "activeUsers": [
+      {
+        "name": "Antony Odhiambo",
+        "posts": 25
+      }
+    ],
+    "transformedForUI": [
+      {
+        "id": 1,
+        "displayName": "Antony Odhiambo",
+        "email": "antony@example.com",
+        "location": "Nairobi, Kenya",
+        "memberSince": 2024,
+        "status": "Active",
+        "engagement": 175
+      },
+      {
+        "id": 2,
+        "displayName": "Jane Smith",
+        "email": "jane@example.com",
+        "location": "Lagos, Nigeria",
+        "memberSince": 2024,
+        "status": "Inactive",
+        "engagement": 87
+      }
+    ],
+    "updatePayload": {
+      "userId": 1,
+      "updates": {
+        "stats": {
+          "posts": 26,
+          "followers": 150,
+          "following": 89
+        }
+      },
+      "timestamp": "2025-09-26T12:53:08.386Z"
+    }
+  }
+}
