@@ -7,13 +7,14 @@
           "id": 1,
           "name": "Antony Odhiambo",
           "email": "antony@example.com",
-          "location": "Nairobi, Kenya",
+          "location": "Kisumu, Kenya",
           "joinDate": "2024-01-15",
           "isActive": true,
           "stats": {
-            "posts": 25,
+            "posts": 26,
             "followers": 150,
-            "following": 89
+            "following": 89,
+            "location": "kisumu ,kenya"
           }
         },
         {
@@ -49,7 +50,7 @@
       "totalPages": 5,
       "totalUsers": 51
     },
-    "timestamp": "2025-09-29T08:13:42.425Z"
+    "timestamp": "2025-09-29T09:14:47.179Z"
   },
   "processedData": {
     "activeUsers": [
