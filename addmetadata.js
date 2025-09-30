@@ -6,8 +6,6 @@ const data = JSON.parse(rawData);
 
 
 
-
-
 function addMetadata(source, requestId) {
   const enrichedData = {
     ...data,

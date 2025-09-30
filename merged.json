@@ -1,0 +1,115 @@
+
+{
+  "apiResponse": {
+    "success": true,
+    "data": {
+      "users": [
+        {
+          "id": 1,
+          "name": "jack mwangi",
+          "email": "antony@example.com",
+          "location": "kisii ,kenya",
+          "joinDate": "2024-01-15",
+          "isActive": "true",
+          "stats": {
+            "posts": 26,
+            "followers": 10000,
+            "following": 2000,
+            "location": "kisii ,kenya"
+          }
+        },
+        {
+          "id": 2,
+          "name": "Jane Smith",
+          "email": "jane@example.com",
+          "location": "Lagos, Nigeria",
+          "joinDate": "2024-03-22",
+          "isActive": "true",
+          "stats": {
+            "posts": 12,
+            "followers": 75,
+            "following": 45
+          }
+        },
+        {
+          "id": 3,
+          "name": "Peter Mwangi",
+          "email": "peter@example.com",
+          "location": "kisii ,kenya",
+          "joinDate": "2025-09-29",
+          "isActive": "false",
+          "stats": {
+            "posts": 10,
+            "followers": 1000,
+            "following": 200,
+            "location": "kisii ,kenya"
+          }
+        }
+      ]
+    },
+    "pagination": {
+      "page": 1,
+      "totalPages": 5,
+      "totalUsers": 51
+    },
+    "timestamp": "2025-09-29T11:33:55.651Z"
+  },
+  "processedData": {
+    "activeUsers": [
+      {
+        "name": "Antony Odhiambo",
+        "posts": 25
+      }
+    ],
+    "transformedForUI": [
+      {
+        "id": 1,
+        "displayName": "Antony Odhiambo",
+        "email": "antony@example.com",
+        "location": "Nairobi, Kenya",
+        "memberSince": 2024,
+        "status": "Active",
+        "engagement": 175
+      },
+      {
+        "id": 2,
+        "displayName": "Jane Smith",
+        "email": "jane@example.com",
+        "location": "Lagos, Nigeria",
+        "memberSince": 2024,
+        "status": "Inactive",
+        "engagement": 87
+      }
+    ],
+    "updatePayload": {
+      "userId": 1,
+      "updates": {
+        "stats": {
+          "posts": 26,
+          "followers": 150,
+          "following": 89
+        }
+      },
+      "timestamp": "2025-09-26T12:53:08.386Z"
+    }
+  },
+  "externalServices": {
+    "weatherData": {
+      "nairobi": {
+        "temp": 24.6,
+        "unit": "°C"
+      },
+      "lagos": {
+        "temp": 27.8,
+        "unit": "°C"
+      }
+    },
+    "exchangeRate": {
+      "KES_USD": 0.007737413898928591,
+      "NGN_USD": 0.0006731854349375798,
+      "USD_KES": 129.242149,
+      "USD_NGN": 1485.474801
+    }
+  },
+  "timestamp": "2025-09-29T13:23:20.655Z"
+}

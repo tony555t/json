@@ -1,0 +1,22 @@
+{
+  "name": "json",
+  "version": "1.0.0",
+  "description": "Merge local JSON with live API data",
+  "type": "module",
+  "main": "merge.js",
+  "scripts": {
+    "start": "node merge.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tony555t/json.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tony555t/json/issues"
+  },
+  "homepage": "https://github.com/tony555t/json#readme"
+}
