@@ -230,34 +230,34 @@ console.log("\n Final Room Status:");
 //     console.log(`      Guest: ${room.currentBooking.guestName}`);
 //   }
 // });
-console.log("\n Final Room Status:");
+// console.log("\n Final Room Status:");
+
+// console.log("\n Final Room Status:");
+
+console.log("\nFinal Room Status (Grouped & Sorted):");
 
 // define custom order
-const statusOrder = {
-  "Occupied": 4,
-  "Reserved": 2,
-  "Under Maintenance": 5,
-  "Cleaning": 3,
-  "Available": 1,
-};
+const statusOrder = ["Occupied", "Reserved", "Under Maintenance", "Cleaning", "Available"];
 
-// sort rooms by status
-const sortedRooms = [...hotelSystem.rooms].sort((a, b) => {
-  return statusOrder[a.status] - statusOrder[b.status];
+// group rooms by status
+const groupedRooms = {};
+
+statusOrder.forEach((status) => {
+  groupedRooms[status] = hotelSystem.rooms.filter((room) => room.status === status);
 });
 
-// display sorted list
-sortedRooms.forEach((room) => {
-  console.log(`   Room ${room.roomNumber}: ${room.status}`);
-  if (room.currentBooking) {
-    console.log(`      Guest: ${room.currentBooking.guestName}`);
+// display grouped rooms
+statusOrder.forEach((status) => {
+  const rooms = groupedRooms[status];
+  if (rooms.length > 0) {
+    console.log(`\n--- ${status.toUpperCase()} ROOMS ---`);
+    rooms.forEach((room) => {
+      console.log(`   Room ${room.roomNumber}: ${room.status}`);
+      if (room.currentBooking) {
+        console.log(`      Guest: ${room.currentBooking.guestName}`);
+      }
+    });
   }
 });
 
 
-// SAVE TO FILE
-fs.writeFileSync(
-  "./hotel-checkin-system.json",
-  JSON.stringify(hotelSystem, null, 2)
-);
-console.log("\n Saved to hotel-checkin-system.json");
