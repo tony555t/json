@@ -1,4 +1,3 @@
-
 {
   "apiResponse": {
     "success": true,
@@ -96,20 +95,20 @@
   "externalServices": {
     "weatherData": {
       "nairobi": {
-        "temp": 24.6,
+        "temp": 20.4,
         "unit": "°C"
       },
       "lagos": {
-        "temp": 27.8,
+        "temp": 26,
         "unit": "°C"
       }
     },
     "exchangeRate": {
-      "KES_USD": 0.007737413898928591,
-      "NGN_USD": 0.0006731854349375798,
-      "USD_KES": 129.242149,
-      "USD_NGN": 1485.474801
+      "KES_USD": 0.007744968893378011,
+      "NGN_USD": 0.0006743609406744382,
+      "USD_KES": 129.116077,
+      "USD_NGN": 1482.88541
     }
   },
-  "timestamp": "2025-09-29T13:23:20.655Z"
+  "timestamp": "2025-09-30T07:13:43.859Z"
 }

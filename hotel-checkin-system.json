@@ -1,0 +1,35 @@
+{
+  "hotelId": 101,
+  "name": "Safari Park Hotel",
+  "rooms": [
+    {
+      "roomId": "R001",
+      "roomNumber": "101",
+      "roomType": "Standard Room",
+      "status": "Occupied",
+      "currentBooking": {
+        "bookingId": "BK002",
+        "guestName": "Antony Odhiambo",
+        "checkIn": "2025-09-29",
+        "checkOut": "2025-10-05",
+        "checkedInAt": "2025-09-30T08:44:06.053Z"
+      }
+    },
+    {
+      "roomId": "R002",
+      "roomNumber": "102",
+      "roomType": "Standard Room",
+      "status": "Available",
+      "currentBooking": null,
+      "previousBooking": {
+        "bookingId": "BK001",
+        "guestName": "John Doe",
+        "checkIn": "2025-09-25",
+        "checkOut": "2025-09-30",
+        "checkedOutAt": "2025-09-30T08:44:06.053Z",
+        "status": "Completed"
+      }
+    }
+  ],
+  "lastUpdated": "2025-09-30T08:44:06.054Z"
+}
