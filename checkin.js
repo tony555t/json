@@ -3,27 +3,7 @@ import fs from "fs"
 let hotelSystem = {
   hotelId: 101,
   name: "Safari Park Hotel",
-//   rooms: [
-//     {
-//       roomId: "R001",
-//       roomNumber: "101",
-//       roomType: "Standard Room",
-//       status: "Available", 
-//       currentBooking: null,
-//     },
-//     {
-//       roomId: "R002",
-//       roomNumber: "102",
-//       roomType: "Standard Room",
-//       status: "Occupied",
-//       currentBooking: {
-//         bookingId: "BK001",
-//         guestName: "John Doe",
-//         checkIn: "2025-09-25",
-//         checkOut: "2025-09-30",
-//       },
-//     },
-//   ],
+
 rooms: [
   {
     roomId: "R001",
@@ -236,7 +216,7 @@ console.log("\n Final Room Status:");
 
 console.log("\nFinal Room Status (Grouped & Sorted):");
 
-// define custom order
+
 const statusOrder = ["Occupied", "Reserved", "Under Maintenance", "Cleaning", "Available"];
 
 // group rooms by status
