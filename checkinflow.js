@@ -1,51 +1,58 @@
-// 
+const fs = require('fs');
 
-// 👉 1. Tunatumia 'node-fetch' kufanya maombi (requests) ya HTTP
-// Ikiwa unatumia Node.js < v18, tafadhali install: npm install node-fetch
-// Kwa Node 18+ unaweza kutumia 'fetch' moja kwa moja bila kusakinisha chochote
+// Page 1 API response
+const page1API = {
+  "success": true,
+  "data": {
+    "users": [
+      { "id": 1, "name": "User 1" },
+      { "id": 2, "name": "User 2" }
+    ]
+  },
+  "pagination": { "page": 1, "totalPages": 3 }
+};
 
-// ⚙️ Kwanza tunafafanua URL ya API
-const API_URL = "https://api.example.com/users"; // badilisha na API yako halisi
+// Page 2 API response
+const page2API = {
+  "success": true,
+  "data": {
+    "users": [
+      { "id": 3, "name": "User 3" },
+      { "id": 4, "name": "User 4" }
+    ]
+  },
+  "pagination": { "page": 2, "totalPages": 3 }
+};
 
-// 👉 2. Tunaunda function ya kupata data kutoka API
-async function getActiveUsers() {
-  try {
-    // 🔄 3. Tunafanya ombi (request) kwa API
-    const response = await fetch(API_URL);
+// Page 3 API response
+const page3API = {
+  "success": true,
+  "data": {
+    "users": [
+      { "id": 5, "name": "User 5" },
+      { "id": 6, "name": "User 6" }
+    ]
+  },
+  "pagination": { "page": 3, "totalPages": 3 }
+};
 
-    // 🧾 4. Tukipata majibu, tunayabadili kuwa JSON
-    const data = await response.json();
+// Merge all pages
+const allUsers = {
+  success: true,
+  data: {
+    users: [
+      ...page1API.data.users,
+      ...page2API.data.users,
+      ...page3API.data.users
+    ]
+  },
+  pagination: {
+    page: "all",
+    totalPages: 3,
+    totalUsers: 6
+  },
+  loadedAt: new Date().toISOString()
+};
 
-    // 🧠 5. Tunadhani data ina muundo huu:
-    // data.apiResponse.data.activeUsers = [ { name, isActive, stats: { posts, followers } }, ... ]
-
-    // ✅ 6. Tunachukua watumiaji kutoka ndani ya data
-    const activeUsers = data?.apiResponse?.data?.activeUsers
-      // 🔍 Kuchuja watumiaji walioko active pekee
-      ?.filter(
-        (user) => user.isActive === true || user.isActive === "true"
-      )
-      // ➕ Kuongeza property mpya ya totalEngagement
-      .map((user) => {
-        const posts = Number(user.stats.posts) || 0;
-        const followers = Number(user.stats.followers) || 0;
-        return {
-          ...user,
-          totalEngagement: posts + followers,
-        };
-      }) || [];
-
-    // 🔁 7. Kurudisha orodha ya watumiaji walio hai
-    return activeUsers;
-
-  } catch (error) {
-    // ⚠️ 8. Kushika makosa kama mtandao haupatikani au data si sahihi
-    console.error("Kuna kosa wakati wa kupata data kutoka API:", error);
-    return [];
-  }
-}
-
-// 👉 9. Kuita function na kuonyesha matokeo
-getActiveUsers().then((users) => {
-  console.log("Watumiaji walio hai:", users);
-});
+console.log('All Users Loaded:');
+console.log(JSON.stringify(allUsers, null, 2));
