@@ -81,5 +81,5 @@ async function mergeWithExternalData() {
 mergeWithExternalData().then((merged) => {
   console.log(JSON.stringify(merged, null, 2));
   fs.writeFileSync("merged.json", JSON.stringify(merged, null, 2));
-  console.log("✅ Merged data saved to merged.json");
+  console.log("2 Merged data saved to merged.json");
 });
